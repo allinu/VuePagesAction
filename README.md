@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - id: Build-Vue
-      uses: allinu/VuePagesAction@1.0.0
+      uses: allinu/VuePagesAction@v1
       with:
         username: 'YourGithubName'
         reponame: 'YourRepoName'
