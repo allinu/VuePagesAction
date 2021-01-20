@@ -1,4 +1,4 @@
-name: 'Vue to Github Pages'
+name: 'Vue to Github Pages (YARN)'
 branding:
   icon: 'activity'  
   color: 'blue'
@@ -32,10 +32,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-      - name: Build Vue
+      - name: Build Vue With Yarn
         run: |
-              npm ci
-              npm run build
+              npm i -g --force yarn
+              yarn build
               cd dist
               if [ "none" !=  ${{ inputs.cname }} ]; then echo '${{ inputs.cname }}' > CNAME; fi
               git config --global user.email "${{ inputs.gitemail }}"
