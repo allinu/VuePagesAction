@@ -34,8 +34,6 @@ runs:
   steps:
       - name: Build Vue With Yarn
         run: |
-              npm i -g yarn
-              yarn
               yarn build
               cd dist
               if [ "none" !=  ${{ inputs.cname }} ]; then echo '${{ inputs.cname }}' > CNAME; fi
